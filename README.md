@@ -43,10 +43,6 @@ We conducted an in-depth analysis of the dataset to extract meaningful insights 
 
 The SQL queries and their results are documented in the `analysis_insights.sql` file.
 
-## Visualizations
-
-We created visualizations such as charts, graphs, and maps to illustrate the insights derived from the data analysis. These visualizations enhance the comprehension of key findings and trends in the dataset. Sample visualizations are included in the `visualizations` directory.
-
 ## Summary and Findings
 
 The project summary and key findings are documented in the `summary_findings.docx` file. This includes a narrative overview of the insights obtained from the data analysis and their implications for infrastructure and community development initiatives in Ontario.
