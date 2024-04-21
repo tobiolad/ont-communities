@@ -8,6 +8,10 @@ This project focuses on analyzing infrastructure projects in Ontario, Canada, us
 
 The dataset used for this analysis is sourced from the Welcome Ontario Data Catalogue, accessible at the following link: [Welcome Ontario Data Catalogue](https://data.ontario.ca/dataset/ontario-builds-key-infrastructure-projects/resource/36f92c5b-0c8b-4a4b-b4c5-d15a43894297)
 
+## Entity-Relationship Diagram (ERD)
+
+![ONT ERD Diagram](ONT_ERD.png)
+
 ## Data Processing
 
 ### Table Creation
