@@ -4,7 +4,7 @@
 
 **Insight:** This query provides a breakdown of the total number of projects by category, allowing us to identify the most common project categories.
 
-![Total Number of Projects](picture1.png)
+![Total Number of Projects](Picture1.png)
 
 
 ## Query 2: Average Number of Projects per Region
