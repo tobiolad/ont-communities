@@ -41,7 +41,7 @@ We conducted an in-depth analysis of the dataset to extract meaningful insights 
 - Projects with the highest estimated total budget
 - Number of projects in each status for a specific ministry
 
-The SQL queries and their results are documented in the `analysis_insights.docx` file.
+The SQL queries and their results are documented in the `analysis_insights.md` file.
 
 ## Summary and Findings
 
@@ -53,7 +53,7 @@ To replicate the analysis:
 
 1. Clone this repository to your local machine.
 2. Set up a PostgreSQL database and execute the SQL scripts in the `sql_scripts` directory to create the database table and perform data processing.
-3. Review the analysis insights documented in the `analysis_insights.docx` file.
+3. Review the analysis insights documented in the `analysis_insights.md` file.
 4. Refer to the summary and findings documented in the `summary_findings.docx` file for a comprehensive overview of the project.
 
 ## Contributors
