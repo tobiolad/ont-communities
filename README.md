@@ -16,11 +16,12 @@ The dataset used for this analysis is sourced from the Welcome Ontario Data Cata
 
 ### Table Creation
 
-We started by creating a PostgreSQL database table called `ont_communities` to store the dataset. The table includes columns for various project attributes such as category, supporting ministry, community, project name, status, target completion date, description, result, area, region, address, postal code, funding details, and geographical coordinates.
+We started by creating a PostgreSQL database table called `ont_communities` to store the dataset. The table includes columns for various project attributes such as category, supporting ministry, community, project name, status, target completion date, description, result, area, region, address, postal code, funding details, and geographical coordinates. 
 
 ### Data Cleaning and Transformation
 
-We performed data cleaning and transformation tasks to ensure the consistency and reliability of the dataset. This included updating empty text fields with 'unknown' and empty numerical fields with 0 to avoid processing errors. We also removed duplicate entries from the dataset to maintain data integrity.
+We performed data cleaning and transformation tasks to ensure the consistency and reliability of the dataset. This included updating empty text fields with 'unknown' and empty numerical fields with 0 to avoid processing errors. We also removed duplicate entries from the dataset to maintain data integrity. After cleaning the `ont_communities` table we created four tables from it which were `project`, `status`, `community` and `ministry` for further analysis.
+
 
 ### SQL Scripts
 
