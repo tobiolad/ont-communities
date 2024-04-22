@@ -45,7 +45,10 @@ The SQL queries and their results are documented in the `analysis_insights.md` f
 
 ## Summary and Findings
 
-The project summary and key findings are documented in the `summary_findings.docx` file. This includes a narrative overview of the insights obtained from the data analysis and their implications for infrastructure and community development initiatives in Ontario.
+For detailed analysis summary and findings, please refer to the following documents:
+
+- **Analysis Summary:** [summary_findings.docx](summary_findings.docx)
+- **Analysis Presentation:** [analysis_presentation.pptx](analysis_presentation.pptx)
 
 ## Usage
 
