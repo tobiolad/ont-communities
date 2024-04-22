@@ -10,7 +10,7 @@ The dataset used for this analysis is sourced from the Welcome Ontario Data Cata
 
 ## Entity-Relationship Diagram (ERD)
 
-![ONT ERD Diagram](ONT_ERD.png)
+![ONT ERD Diagram](pictures/ONT_ERD.png)
 
 ## Data Processing
 
