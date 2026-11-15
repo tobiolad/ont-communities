@@ -1,0 +1,28 @@
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / web
+web/node_modules/
+web/dist/
+web/.vite/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Data: keep the documented raw snapshot(s) under data/raw/, but not scratch exports
+data/*.tmp
