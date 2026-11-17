@@ -1,7 +1,7 @@
 # Data Quality Report
 
-Generated: 2026-11-15T11:07:57.167734+00:00  
-Ingestion batch: 2
+Generated: 2026-11-17T23:42:13.442250+00:00  
+Ingestion batch: 3
 
 Every row below is a real result from the live database for this batch — not a mockup. 
 Re-run with `python -m ont_pipeline.run_pipeline` to regenerate.
@@ -46,10 +46,10 @@ Re-run with `python -m ont_pipeline.run_pipeline` to regenerate.
 ```json
 {
   "by_precision": {
-    "month": 2184,
-    "invalid": 1,
+    "unknown": 40,
     "year": 47,
-    "unknown": 40
+    "month": 2184,
+    "invalid": 1
   }
 }
 ```
@@ -60,8 +60,8 @@ Re-run with `python -m ont_pipeline.run_pipeline` to regenerate.
 ```json
 {
   "by_coordinate_status": {
-    "multi_point": 3,
     "missing": 65,
+    "multi_point": 3,
     "single_point": 2204
   },
   "bounding_box": {

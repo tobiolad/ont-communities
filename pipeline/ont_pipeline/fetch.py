@@ -22,6 +22,7 @@ from .config import Config
 
 @dataclass
 class SourceSnapshot:
+    csv_bytes: bytes
     csv_text: str
     rows: list[dict]
     resource_id: str
@@ -57,6 +58,7 @@ def fetch_source_snapshot(resource_id: str | None = None, api_base: str | None =
     rows = list(csv.DictReader(io.StringIO(csv_text)))
 
     return SourceSnapshot(
+        csv_bytes=csv_bytes,
         csv_text=csv_text,
         rows=rows,
         resource_id=resource_id,
@@ -78,7 +80,11 @@ def save_snapshot(snapshot: SourceSnapshot, raw_dir: Path | None = None) -> tupl
     csv_path = raw_dir / f"ontbuilds-communities-{date_stamp}.csv"
     meta_path = raw_dir / f"ontbuilds-communities-{date_stamp}.meta.json"
 
-    csv_path.write_text(snapshot.csv_text, encoding="utf-8")
+    # Written as the original downloaded bytes (not the BOM-stripped decoded
+    # text) so the archived file's MD5 always matches file_hash_md5 below —
+    # the snapshot must be independently verifiable against what was
+    # actually downloaded, not a re-encoded copy of it.
+    csv_path.write_bytes(snapshot.csv_bytes)
     meta_path.write_text(
         json.dumps(
             {

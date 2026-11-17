@@ -92,7 +92,7 @@ def list_projects(
                    target_completion_precision, target_window_passed, coordinate_status, website
             FROM v_project
             {where_sql}
-            ORDER BY {order_col} {sort_dir} NULLS LAST
+            ORDER BY {order_col} {sort_dir} NULLS LAST, project_id ASC
             LIMIT %s OFFSET %s
             """,
             [*params, page_size, offset],

@@ -100,6 +100,31 @@ def test_insights_investment_by_region_excludes_undisclosed_from_sum():
     assert "note" in data
 
 
+def test_pagination_has_no_duplicates_or_gaps_across_pages():
+    """
+    Regression test: sorting by a column with many ties (e.g. budget, where
+    1,069 projects are all exactly 0) must still paginate deterministically.
+    Walks every page at a small page size and confirms the full set of
+    project_ids is exactly the total count, with no repeats.
+    """
+    page_size = 17  # deliberately not a divisor of the total, to catch boundary bugs
+    first_page = client.get("/api/projects", params={"sort_by": "estimated_total_budget", "sort_dir": "asc", "page_size": page_size}).json()
+    total = first_page["total"]
+    total_pages = (total + page_size - 1) // page_size
+
+    seen_ids = []
+    for page in range(1, total_pages + 1):
+        resp = client.get(
+            "/api/projects",
+            params={"sort_by": "estimated_total_budget", "sort_dir": "asc", "page": page, "page_size": page_size},
+        )
+        assert resp.status_code == 200
+        seen_ids.extend(p["project_id"] for p in resp.json()["results"])
+
+    assert len(seen_ids) == total
+    assert len(set(seen_ids)) == total, "pagination produced duplicate project_ids across pages"
+
+
 def test_data_quality_report_has_real_results():
     resp = client.get("/api/data-quality")
     data = resp.json()
